@@ -1,0 +1,93 @@
+body{
+	background-color:#200;
+	overflow-x: hidden;
+}
+/*------------------------top*/
+#top_{
+	width:100%;
+	height:100vh;
+	position:relative;
+	overflow:hidden;
+}
+.top_images{
+	width:100%;
+	height:100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	opacity:0;
+	position: absolute;
+	animation:silder_ 32s linear infinite;
+}
+#top_image001{
+	z-index:990;
+	animation-delay:0s;
+}
+#top_image002{
+	z-index:889;
+	animation-delay:8s;
+}
+#top_image003{
+	z-index:888;
+	animation-delay:16s;
+}
+#top_image004{
+	z-index:887;
+	animation-delay:24s;
+}
+
+@keyframes silder_{
+	0%{
+		opacity:0;
+		transform:scale(1);
+	}
+	
+	3.125%{
+		/*フェードイン　1秒*/ 
+		opacity:1;
+	}
+
+	25%{
+		/*表示を維持　8秒*/
+		opacity:1;
+	}
+
+	31.25%{
+		/*フェードアウト　	10秒*/
+		opacity:0;
+		transform:scale(1.08);
+	}
+
+	100%{
+		/*32秒*/
+		opacity:0;
+	}
+
+}
+/*------------------------content_1*/
+#contents_1{
+	position:relative;
+	height:500px;
+}
+#contents_1 .back_char{
+	position:absolute;
+	font-size:240px;
+	top:70px;
+	right:50px;
+	color:#ddd;
+}
+#contents_1 div:nth-child(1){
+	font-size:120px;
+	color:#fff;
+}
+@media (max-width:768px){
+
+#top_images{
+	zoom:0.7;
+}
+
+}
